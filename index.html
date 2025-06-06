@@ -5,29 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wavy Trees</title>
   <style>
-    /* Center the video and remove default margins */
-    body, html { margin: 0; padding: 0; height: 100%; }
-    .video-container {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
+    /* Make html/body fill the viewport and remove any default margins */
+    html, 
+    body {
+      margin: 0;
+      padding: 0;
       width: 100%;
-      max-width: 800px;
+      height: 100%;
+      overflow: hidden; /* prevents scrollbars */
     }
+
+    /* Position the iframe so it always covers 100% of the screen */
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      aspect-ratio: 16/9;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
 <body>
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/7XD1qZhH7ZY?autoplay=1&mute=0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <iframe
+    src="https://www.youtube.com/embed/7XD1qZhH7ZY?autoplay=1&mute=0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+  ></iframe>
 </body>
 </html>
